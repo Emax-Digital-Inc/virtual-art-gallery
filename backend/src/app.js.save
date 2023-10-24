@@ -1,0 +1,4 @@
+npm init -y
+mkdir src
+cd src
+nano app.js

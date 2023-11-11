@@ -27,6 +27,9 @@ import { defaultErrorHandler } from "./middlewares/index.js";
 import { winstonLoggerStream } from "./middlewares/logging.js";
 import authRoutes from "./routes/auth.js";
 import paymentRoutes from "./routes/tickets.js";
+import categoryRoutes from "./routes/categories.js";
+import artistsRoutes from "./routes/artists.js";
+import reviewRoutes from "./routes/review.js";
 
 dotenv.config();
 const app = express();
@@ -53,6 +56,9 @@ app.use("/api/v1/", defaultErrorHandler, eventsRoutes);
 app.use("/api/v1/", defaultErrorHandler, usersRoutes);
 app.use("/api/v1/auth/", defaultErrorHandler, authRoutes);
 app.use("/api/v1/", defaultErrorHandler, paymentRoutes);
+app.use("/api/v1/", defaultErrorHandler, categoryRoutes);
+app.use("/api/v1/", defaultErrorHandler, artistsRoutes);
+app.use("/api/v1/", defaultErrorHandler, reviewRoutes);
 
 // Start server
 

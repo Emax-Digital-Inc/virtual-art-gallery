@@ -130,6 +130,7 @@ export const getReviews = async (req, res, next) => {
  *   },
  * }
  */
+
 export const getReview = async (req, res, next) => {
   try {
     const eventId = req.params.id;
@@ -170,6 +171,7 @@ export const getReview = async (req, res, next) => {
  * "averageRating": 3.8
 }
  */
+
 export const averageRating = async (req, res, next) => {
   const eventId = req.params.id;
 
